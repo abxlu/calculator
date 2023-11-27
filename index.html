@@ -4,59 +4,38 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator // Project SKYNET</title>
-    <link rel="stylesheet" href="main.css">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="main.scss">
+    <script type="module" src="/src/main.ts" defer></script>
   </head>
   <body>
     <section class="title">
       <h1 class="title__heading">calculator</h1>
-    </section>
+
     <div class="container">
-      
-      <section>
-        <main class = "input__display">
-        <div><input type="" class="screen"></div>
-        </main>
+      <input type="text" class="screen" disable>
+      <div class="keys">
+        <button class="operator" value="+" id= "button-+">+</button>
+        <button class="operator" value="-" id= "button--">-</button>
+        <button class="operator" value="*" id= "button-*">&#215;</button>
+        <button class="operator" value="/" id= "button-÷">&#247;</button>
 
-      </section>
+        <button class="operator" value="+" id= "button-7">7</button>
+        <button class="operator" value="+" id= "button-8">8</button>
+        <button class="operator" value="+" id= "button-9">9</button>
 
-      <section class="buttons">
-        <button class="buttons__operations" id= "button-7">7</button>
-        <button class="buttons__operations" id= "button-8">8</button>
-        <button class="buttons__operations" id= "button-9">9</button>
-        <button class="buttons__operations" id= "button-DEL">DEL</button>
-        <button class="buttons__operations" id= "button-AC">AC</button>
-      </section>
+        <button class="operator" value="+" id= "button-4">4</button>
+        <button class="operator" value="+" id= "button-5">5</button>
+        <button class="operator" value="+" id= "button-6">6</button>
 
-      <section class="buttons">
-        <button class="buttons__operations" id= "button-4">4</button>
-        <button class="buttons__operations" id= "button-5">5</button>
-        <button class="buttons__operations" id= "button-6">6</button>
-        <button class="buttons__operations" id= "button-x">x</button>
-        <button class="buttons__operations" id= "button-÷">÷</button>
-      </section>
+        <button class="operator" value="+" id= "button-1">1</button>
+        <button class="operator" value="+" id= "button-2">2</button>
+        <button class="operator" value="+" id= "button-3">3</button>
 
-      <section class="buttons">
-        <button class="buttons__operations" id= "button-1">1</button>
-        <button class="buttons__operations" id= "button-2">2</button>
-        <button class="buttons__operations" id= "button-3">3</button>
-        <button class="buttons__operations" id= "button-+">+</button>
-        <button class="buttons__operations" id= "button--">-</button>
-      </section>
-      <section class="buttons">
-        <button class="buttons__operations" id= "button-0">0</button>
-        <button class="buttons__operations" id= "button-.">.</button>
-        <button class="buttons__operations" id= "button-X^2">x^2</button>
-        <button class="buttons__operations" id= "button-ANS">ANS</button>
-        <button class="buttons__operations" id= "button-=">=</button>
-      </section>
-    </main>
-      <script type="module" src="/src/main.ts"></script>
-  </body>
+        <button class="operator" value="0" id= "button-0">0</button>
+        <button class="decimal" value="." id= "button-.">.</button>
+        <button class="all-clear" value="all-clear" id= "button-AC">AC</button>
+        <button class="calculate" id= "button-=">=</button>
 
-
-      
-
-      <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
