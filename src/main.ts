@@ -1,32 +1,48 @@
-import './main.scss'
-
 const displayNumber= (outputNumber: number ): number => {
 
 }
 
+// Query Selectors
+const inputScreen = document.querySelector(".screen")
+console.log(screen)
+
+
 const buttons = document.querySelectorAll(".buttons__operations");
 
+// Globally Scoped Variables
 
+let inputValue : number = 0;
+
+const displayNumbers = () => {
+
+inputScreen.value = inputValue;
+
+}
+
+displayNumbers()
+
+
+
+// button work
 
 const buttonFour = document.getElementById("button-4")
 
-
 buttonFour.addEventListener("click", ()=> {
-console.log("4")
+inputScreen.value = "4";
 })
 
 const buttonFive = document.getElementById("button-5")
-console.log(buttonFive)
+
 
 buttonFive.addEventListener("click", ()=> {
-console.log("5")
+    inputScreen.value = "5";
 })
 
 const buttonSix = document.getElementById("button-6")
-console.log(buttonFive)
+
 
 buttonSix.addEventListener("click", ()=> {
-console.log("6")
+    inputScreen.value = "6";
 })
 
 const buttonMultiply = document.getElementById("button-x")
@@ -84,5 +100,10 @@ console.log(buttonZero)
 buttonZero.addEventListener("click", ()=> {
 console.log("0")
 })
+
+const buttonDel = document.getElementById("button-DEL")
+console.log(buttonDel)
+
+
 
 
