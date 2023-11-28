@@ -42,6 +42,7 @@ h1 {
 .all-clear:hover {
   border: 2px solid red;
   text-decoration-color: red;
+  color: red;
 }
 
 .equal-sign {
@@ -57,6 +58,7 @@ button:hover {
 .equal-sign:hover {
   border: 2px solid lightseagreen;
   text-decoration-color: lightseagreen;
+  color: lightseagreen;
 }
 
 .keys {
@@ -69,9 +71,11 @@ button:hover {
 .operator:hover {
   border: 2px solid lightseagreen;
   text-decoration-color: lightseagreen;
+  color: lightseagreen;
 }
 
 .decimal:hover {
   border: 2px solid lightseagreen;
   text-decoration-color: lightseagreen;
+  color: lightseagreen;
 }/*# sourceMappingURL=main.css.map */
