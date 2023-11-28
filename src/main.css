@@ -6,10 +6,6 @@
   font-family: Verdana, sans-serif;
 }
 
-h1 {
-  font-family: verdana;
-}
-
 .container {
   border: 3px solid rgb(76, 76, 76);
   border-radius: 0px;
@@ -31,12 +27,6 @@ h1 {
   text-align: right;
   padding-right: 20px;
   padding-left: 10px;
-}
-
-.button {
-  height: 100px;
-  border: 1px solid grey;
-  background-color: white;
 }
 
 .all-clear:hover {

@@ -1,37 +1,42 @@
+// UMXclusive: Object Values (Initialisation)
 
+const calculator = {
+    displayValue: "0",
+    firstOperand: false,
+    secondOperand: false,
+    operator: null
+};
 
-const displayNumber= (outputNumber: number): number => {
+// Display - Here is a function to update the display screen
 
-}
+const updateScreen = () => {
+const display = document.querySelector(".screen");
+    display.value = calculator.displayValue;
+};
 
-// Query Selectors
-const inputScreen = document.querySelector(".screen")
-console.log(screen)
+updateScreen(3);
 
-
-const buttons = document.querySelectorAll(".buttons__operations");
-
-// Globally Scoped Variables
-
-let inputValue : number = 0;
-
-const displayNumbers = () => {
-
-inputScreen.value = inputValue;
-
-}
-
-displayNumbers()
-
-
-
-// button work
+// Key press
 
 const buttonFour = document.getElementById("button-4")
 
 buttonFour.addEventListener("click", ()=> {
-inputScreen.value = "4";
+calculator.displayValue = "4";
 })
+
+const keys = document.querySelector(".keys")
+keys.addEventListener("click", ()=> {
+const {target} = event;
+if(!target.matches("button")) {
+    return;
+}
+});
+
+
+
+
+
+
 
 const buttonFive = document.getElementById("button-5")
 
@@ -103,8 +108,6 @@ buttonZero.addEventListener("click", ()=> {
 console.log("0")
 })
 
-const buttonDel = document.getElementById("button-DEL")
-console.log(buttonDel)
 
 
 
