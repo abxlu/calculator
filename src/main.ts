@@ -1,6 +1,4 @@
-
-
-const displayNumber= (outputNumber: number ): number => {
+const displayNumber= (outputNumber: number): number => {
 
 }
 

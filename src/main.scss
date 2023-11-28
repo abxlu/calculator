@@ -1,17 +1,25 @@
+
+
 * { 
+    background-color: white;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Verdana, sans-serif;
+}
+
+h1 {
+    font-family: verdana;
 }
 
 .container {
-    border: 1px solid black;
-    border-radius: 20px;
-    position: absolute ;
+    border: 3px solid rgb(76, 76, 76);
+    border-radius: 0px;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 320px;
+    width: 280px;
 }
 
 .screen {
@@ -21,27 +29,20 @@
     font-size: 3rem;
     height: 80px;
     border: none;
-    background-color: transparent;
+    background-color: white;
     text-align: right;
     padding-right: 20px;
     padding-left: 10px;
 }
 
 .button {
-    height: 60px;
-    border-radius: 20px;
+    height: 100px;
     border: 1px solid black;
-    background-color: transparent;
-
-}
-
-.button:hover {
-    border: 1px solid #61929c;
-    text-decoration-color: #61929c;
+    background-color: white
 }
 
 .all-clear:hover {
-    border:1px solid red;
+    border:2px solid red;
     text-decoration-color: red;
 }
 
@@ -50,10 +51,26 @@ height: 100%;
 grid-area: 2 / 4/ 6 /5;
 }
 
+button:hover {
+    border:3px solid #61929c;
+    text-decoration-color: #61929c;
+    
+}
+
+.equal-sign:hover {
+    border:3px solid #61929c;
+    text-decoration-color: #61929c;
+}
+
 .keys {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 12px;
     padding: 10px;
 
+}
+
+.operator:hover {
+    border:3px solid black;
+    text-decoration-color: black;
 }
