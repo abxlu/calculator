@@ -13,7 +13,16 @@ const display = document.querySelector(".screen");
 };
 updateScreen();
 
+// Reset Display
+const resetDisplay = () => {
+    calculator.displayValue = "0";
+    calculator.firstOperand = null;
+    calculator.secondOperandPending = false;
+    calculator.operator = null;
+};
+
 // Handling Key presses
+
 const keys = document.querySelector(".keys")
 keys.addEventListener("click", (event)=> {
     const {target} = event;
@@ -34,7 +43,7 @@ keys.addEventListener("click", (event)=> {
     }
 
     if(target.classList.contains("all-clear")) {
-        resetCalculator();
+        resetDisplay();
         updateScreen();
         return;
     }
@@ -42,6 +51,18 @@ keys.addEventListener("click", (event)=> {
     inputDigit(target.value);
     updateScreen();
 });
+
+// Input Decimal Value
+const inputDecimal = (dot) => {
+    if (calculator.secondOperandPending === true) {
+        calculator.displayValue = "0.";
+        calculator.secondOperandPending = false;
+        return;
+    }
+    if (!calculator.displayValue.includes(dot)) {
+        calculator.displayValue += dot;
+    }
+};
 
 // Input Digit Value
 const inputDigit = (digit) => {
@@ -58,22 +79,6 @@ const inputDigit = (digit) => {
     }
 };
 
-// Input Decimal Value
-const inputDecimal = (dot) => {
-    if (calculator.secondOperandPending === true) {
-        calculator.displayValue = "0.";
-        calculator.secondOperandPending = false;
-        return;
-    }
-    if (!calculator.displayValue.includes(dot)) {
-        calculator.displayValue += dot;
-    }
-};
+// Calculator Logic
 
-// Reset Calculator
-const resetCalculator = () => {
-    calculator.displayValue = "0";
-    calculator.firstOperand = null;
-    calculator.secondOperandPending = false;
-    calculator.operator = null;
-};
+
