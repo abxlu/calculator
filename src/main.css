@@ -24,7 +24,7 @@ h1 {
   width: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  font-size: 3rem;
+  font-size: 2rem;
   height: 80px;
   border: none;
   background-color: white;
@@ -35,7 +35,7 @@ h1 {
 
 .button {
   height: 100px;
-  border: 1px solid black;
+  border: 1px solid grey;
   background-color: white;
 }
 
@@ -55,8 +55,8 @@ button:hover {
 }
 
 .equal-sign:hover {
-  border: 3px solid #61929c;
-  text-decoration-color: #61929c;
+  border: 2px solid lightseagreen;
+  text-decoration-color: lightseagreen;
 }
 
 .keys {
@@ -67,6 +67,11 @@ button:hover {
 }
 
 .operator:hover {
-  border: 3px solid black;
-  text-decoration-color: black;
+  border: 2px solid lightseagreen;
+  text-decoration-color: lightseagreen;
+}
+
+.decimal:hover {
+  border: 2px solid lightseagreen;
+  text-decoration-color: lightseagreen;
 }/*# sourceMappingURL=main.css.map */
