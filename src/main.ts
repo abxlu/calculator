@@ -1,3 +1,4 @@
+// UMXclusive presents..
 // Object Values (Initialisation)
 const calculator = {
     displayValue: '0',
@@ -22,7 +23,6 @@ const resetDisplay = () => {
 };
 
 // Handling Key presses
-
 const keys = document.querySelector(".keys")
 keys.addEventListener("click", (event)=> {
     const {target} = event;
@@ -79,6 +79,39 @@ const inputDigit = (digit) => {
     }
 };
 
+// Handle Operators
+const handleOperator = (nextOperator) => {
+    const { firstOperand, displayValue, operator } = calculator;
+    const inputValue = parseFloat(displayValue);
+
+    if (operator && calculator.secondOperandPending) {
+        calculator.operator = nextOperator;
+        return
+    }
+    if (firstOperand == null && !isNaN(inputValue)) {
+        calculator.firstOperand = inputValue
+    }   else if (operator) {
+        const result = calculate(firstOperand, inputValue, operator);
+
+        calculator.displayValue = `${parseFloat(result.toFixed(7))}`;
+        calculator.firstOperand = result;
+    }
+
+    calculator.secondOperandPending = true;
+    calculator.operator = nextOperator;
+
+};
+
 // Calculator Logic
-
-
+const calculate = (firstOperand, secondOperand, operator) => {
+    if (operator ==='+') {
+        return firstOperand + secondOperand;
+    }   else if (operator ==='-') {
+        return firstOperand - secondOperand;
+    }   else if (operator ==='*') {
+        return firstOperand * secondOperand;   
+    }   else if (operator ==='/') {
+        return firstOperand / secondOperand;
+    }
+    return secondOperand;
+};
