@@ -41,8 +41,8 @@
 }
 
 button:hover {
-  border: 3px solid #61929c;
-  text-decoration-color: #61929c;
+  border: 2px solid lightseagreen;
+  text-decoration-color: lightseagreen;
 }
 
 .equal-sign:hover {
